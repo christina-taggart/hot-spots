@@ -1,10 +1,29 @@
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+/*  margin: 20px auto;
+*/  /*width: 600px;
+  height: 600px;*/
+/*  padding: 0px 20px 20px 20px;
+*/  border: 1px dotted black;
 }
 
 th {
   text-align: left;
+}
+
+
+
+html, body, #map-canvas {
+  height: 100%;
+/*  width: 100%;
+*/
+  padding: 0px;
+
+}
+
+#map-canvas{
+width: 900px;
+height:600px;
+border:1px solid black;
+margin:0 auto;
+margin-top: 200px;
 }
