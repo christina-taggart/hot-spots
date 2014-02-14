@@ -1,3 +1,6 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :location_users
+  has_many :locations, through: :location_users
+  validates :email, presence: true, uniqueness: true
+  validates :password_hash, presence: true
 end
