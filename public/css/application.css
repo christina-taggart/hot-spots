@@ -8,3 +8,65 @@
 th {
   text-align: left;
 }
+
+nav {
+  width: 100%;
+  min-width: 1000px;
+  height: 70px;
+  font-weight: bold;
+  top: 10px;
+}
+
+nav .brand, nav .brand a {
+  margin-left: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.75em;
+  color: black;
+  text-decoration: none;
+  width: 55%;
+  min-width: 400px;
+  display: inline-block;
+}
+
+nav .brand, nav .brand a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  display: inline-block;
+  width: 30%;
+  min-width: 300px;
+  text-align: right;
+}
+
+nav li {
+  margin-right: 25px;
+  display: inline;
+}
+
+nav li a {
+  font-size: 1.25em;
+  color: black;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+
+#sign-out input {
+  border: none;
+  color: black;
+  font-size: 1.25em;
+  background:none;
+  font-weight: bold;
+}
+
+#sign-out input:hover {
+  text-decoration: underline;
+}
+
+form#sign-out {
+  display: inline;
+}
