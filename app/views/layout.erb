@@ -11,7 +11,7 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdrSxFzvZx0p98-UYVbiej9L0aP-d2ik&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdrSxFzvZx0p98-UYVbiej9L0aP-d2ik&sensor=false"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
@@ -21,6 +21,24 @@
   <title>Hot Spots</title>
 </head>
 <body>
+  <nav>
+    <div class="brand"><a href="/">Darsh Hotspots</a>
+    </div>
+    <ul>
+      <% if current_user %>
+        <li>
+          <form id="sign-out" action="/sessions" method="post">
+            <input name="_method" type="hidden" value="delete" />
+            <input type="submit" value="Sign Out">
+          </form>
+        </li>
+      <% else %>
+        <li><a href="/sessions/new">Sign In</a></li>
+        <li><a href="/users/new">Sign Up</a></li>
+      <% end %>
+    </ul>
+  </nav>
+
   <%= yield %>
 </body>
 </html>
