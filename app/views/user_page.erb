@@ -5,12 +5,16 @@
   <p>Hi <%= current_user.email %></p>
 
   <% if @locations.length > 0 %>
-  <h2>Locations youve added: <%= @locations.length %></h2>
-  <ul>
+    <h2>Locations youve added: <%= @locations.length %></h2>
+    <div class='all-locations'>
     <% @locations.each do |location| %>
-
+    <ul class="location-<%= location.id %>">
+      <li>name: <span class="name"><%= location.name %></span></li>
+      <li>longitude: <span class="longitude"><%= location.longitude %></span></li>
+      <li>lattitude: <span class="lattitude"><%= location.lattitude %></span></li>
+    </ul>
     <% end %>
-  <ul>
+    </div>
   <% end %>
 
   <div id="map-canvas"></div>

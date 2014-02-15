@@ -15,6 +15,8 @@ function initialize() {
     zoom: 2
   };
 
+  debugger;
+
   chicago = new google.maps.LatLng(41.850033, -87.6500523);
 
   var map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -22,6 +24,7 @@ function initialize() {
 
   locationArray = [chicago]
   locationNameArray = ['Chicago']
+
 
   var marker = new google.maps.Marker({
       position: chicago,

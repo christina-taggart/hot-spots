@@ -22,7 +22,7 @@ end
 
 # Logged in user is given option of create or take survey
 get '/users/:user_id' do
-  @locations = current_user.locations
+  @locations = User.includes(:locations).find(params[:user_id]).locations
 
   erb :user_page
 end
