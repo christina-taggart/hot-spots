@@ -3,6 +3,16 @@
   <h1>Your Hotspots</h1>
 
   <p>Hi <%= current_user.email %></p>
+
+  <% if @locations.length > 0 %>
+  <h2>Locations youve added: <%= @locations.length %></h2>
+  <ul>
+    <% @locations.each do |location| %>
+
+    <% end %>
+  <ul>
+  <% end %>
+
   <div id="map-canvas"></div>
 
 </div>
