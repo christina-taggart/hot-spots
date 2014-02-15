@@ -30,5 +30,18 @@ function initialize() {
   });
 
   marker.setMap(map)
+
+   google.maps.event.addListener(map, 'click', function(event) {
+    debugger;
+    var add =confirm('Add location to your hot spots?');
+    if(add == true){
+      add_location_to_db(event.latLng.d, event.latLng.e) if current_user
+    }
+
+  });
+}
+
+add_location_to_db function(lattitude, longitude){
+
 }
 
